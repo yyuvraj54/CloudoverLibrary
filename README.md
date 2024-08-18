@@ -35,6 +35,41 @@ dependencies {
 val cloudOver = Cloudover("your_api_key")
 cloudOver.getData("New York")
 ```
+
+
+### ViewModel Code
+
+```groovy
+val cloudover = Cloudover("5dd3279cec964931b3e193821241808")
+val weatherResult: LiveData<NetworkResponse<WeatherModel>> = cloudover.weatherResult
+
+fun getData(city: String) {
+    cloudover.getData(city)
+}
+```
+
+### Composable Code
+
+
+```groovy
+val weatherResult = viewModel.weatherResult.observeAsState()
+
+ when(val result = weatherResult.value){
+            is NetworkResponse.Error -> {
+                Text(text = result.message)
+            }
+            NetworkResponse.Loading -> {
+                CircularProgressIndicator()
+            }
+            is NetworkResponse.Success -> {
+                WeatherDetails(data = result.data)
+            }
+            null -> {
+            }
+        }
+```
+
+
 ### Response
 
 ```groovy

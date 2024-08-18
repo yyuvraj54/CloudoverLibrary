@@ -2,15 +2,10 @@ package com.example.realtimeweatherlibrary
 
 
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
 import com.example.cloudover.Api.Cloudover
-import com.example.realtimeweatherlibrary.Api.Constant
 import com.example.realtimeweatherlibrary.Api.NetworkResponse
-import com.example.realtimeweatherlibrary.Api.RetrofitInstance
-import com.example.realtimeweatherlibrary.Api.WeatherModel
-import kotlinx.coroutines.launch
+import com.example.cloudover.Api.Model.WeatherModel
 
 
 class WeatherViewModel :ViewModel() {

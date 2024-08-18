@@ -1,5 +1,6 @@
-package com.example.realtimeweatherlibrary.Api
+package com.example.cloudover.Api.Retrofit
 
+import com.example.cloudover.Api.Model.WeatherModel
 import retrofit2.http.GET
 import retrofit2.http.Query
 import retrofit2.Response

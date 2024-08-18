@@ -4,8 +4,8 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.realtimeweatherlibrary.Api.NetworkResponse
-import com.example.realtimeweatherlibrary.Api.RetrofitInstance
-import com.example.realtimeweatherlibrary.Api.WeatherModel
+import com.example.cloudover.Api.Retrofit.RetrofitInstance
+import com.example.cloudover.Api.Model.WeatherModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
